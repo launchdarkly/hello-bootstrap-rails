@@ -1,24 +1,18 @@
-# README
+# hello-bootstrap-rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails app demonstrating LaunchDarkly server-side bootstrapping.
 
-Things you may want to cover:
+## Running Locally
 
-* Ruby version
+Make sure you have [Node.js](http://nodejs.org/) installed.
 
-* System dependencies
+```sh
+$ git clone git@github.com:launchdarkly/hello-bootstrap-ruby.git # or clone your own fork
+$ cd hello-bootstrap-ruby
+$ export LD_SDK_KEY=YOUR-SDK-KEY
+$ export LD_CLIENTSIDE_ID=YOUR-CLIENTSIDE-ID
+$ bundle install
+$ bin/rails server
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Your app should now be running on [localhost:3000](http://localhost:3000/).

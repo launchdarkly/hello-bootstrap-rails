@@ -36,6 +36,6 @@ plugin :tmp_restart
 
 
 on_worker_boot do
-  Rails.configuration.client_side_id = 'CLIENT SIDE ID'
-  Rails.configuration.ld_client = LaunchDarkly::LDClient.new('SDK KEY')
+  Rails.configuration.client_side_id = ENV['LD_CLIENTSIDE_ID']
+  Rails.configuration.ld_client = LaunchDarkly::LDClient.new(ENV['LD_SDK_KEY'])
 end
