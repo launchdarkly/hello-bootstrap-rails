@@ -1,0 +1,32 @@
+<script src="https://app.launchdarkly.com/snippet/ldclient.min.js"></script>
+<script>
+    var user = <%= raw @user %>;
+    console.log(`Clients initialized`);
+    var client = LDClient.initialize('<%= @client_side_id %>', user);
+    var bootstrapClient = LDClient.initialize('<%= @client_side_id %>', user, {
+        bootstrap: <%= @all_flags_state %>
+    });
+
+        client.on('ready', handleUpdateNormalClient);
+        client.on('change', handleUpdateNormalClient);
+        bootstrapClient.on('ready', handleUpdateBootstrapClient);
+        bootstrapClient.on('change', handleUpdateBootstrapClient);
+
+        function handleUpdateNormalClient(){
+            console.log(`Normal SDK updated`);
+            render('.normal', client);
+        }
+        function handleUpdateBootstrapClient(){
+        console.log(`Bootstrapped SDK updated`);
+        render('.bootstrap', bootstrapClient);
+    }
+
+    function render(selector, targetClient) {
+        document.querySelector(selector).innerHTML = JSON.stringify(targetClient.allFlags(user), null, 2);
+    }
+</script>
+<h1>LaunchDarkly server-side bootstrap example</h1>
+<ul>
+    <li><code>normal client</code>: <span class="normal">initializing…</span></li>
+    <li><code>bootstraped client</code>: <span class="bootstrap">initializing…</span></li>
+</ul>
