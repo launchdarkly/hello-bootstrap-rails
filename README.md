@@ -2,6 +2,13 @@
 
 A Rails app demonstrating LaunchDarkly server-side bootstrapping.
 
+The following files were modified and/or added to create this example
+- app/views/hello_world/index.html.erb
+- app/controllers/hello_world_controller.rb
+- config/puma.rb
+
+The rest of the files were created by rails and are unmodified.
+
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) installed.
