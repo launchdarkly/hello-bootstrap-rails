@@ -19,6 +19,7 @@ $ cd hello-bootstrap-ruby
 $ export LD_SDK_KEY=YOUR-SDK-KEY
 $ export LD_CLIENTSIDE_ID=YOUR-CLIENTSIDE-ID
 $ bundle install
+$ bin/rails db:migrate
 $ bin/rails server
 ```
 
