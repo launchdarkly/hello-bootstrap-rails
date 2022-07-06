@@ -1,9 +1,13 @@
+# Set up the user properties. This user should appear on your LaunchDarkly users
+# dashboard soon after you run the demo. Normal and bootstrapped flag values for
+# this user should appear in your app.
+
 class HelloWorldController < ApplicationController
   def index
       user = {
-        key: "bob@example.com",
-        firstName: "Bob",
-        lastName: "Loblaw",
+        key: "example-user-key",
+        firstName: "Sandy",
+        lastName: "Sands",
         custom: {
           groups: "beta_testers"
         }
