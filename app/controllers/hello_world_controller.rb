@@ -6,8 +6,7 @@ class HelloWorldController < ApplicationController
   def index
       user = {
         key: "example-user-key",
-        firstName: "Sandy",
-        lastName: "Sands",
+        name: "Sandy",
         custom: {
           groups: "beta_testers"
         }
