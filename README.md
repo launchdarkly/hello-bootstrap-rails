@@ -7,13 +7,13 @@ We modified and/or added the following files to create this example:
 - app/controllers/hello_world_controller.rb
 - config/puma.rb
 
-Rails created the rest of the files and are unmodified.
+Rails created the rest of the files and they are unmodified.
 
-Below, you'll find the build procedure. For more comprehensive instructions, you can visit your [Quickstart page](https://app.launchdarkly.com/quickstart#/) or the [Ruby reference guide](https://docs.launchdarkly.com/sdk/server-side/ruby).
+Below, you'll find the build procedure. To learn more about the Ruby SDK, read the [Ruby SDK reference](https://docs.launchdarkly.com/sdk/server-side/ruby).
 
 ## Build instructions
 
-Make sure you have [Node.js](http://nodejs.org/) installed. Then, clone the repository, set the `LD_SDK_KEY` and `LD_CLIENTSIDE_ID` environment variables, and start your local server. Here's how:
+Make sure you have Ruby installed. Then, clone the repository, set the `LD_SDK_KEY` and `LD_CLIENTSIDE_ID` environment variables, and start your local server. Here's how:
 
 ```sh
 $ git clone git@github.com:launchdarkly/hello-bootstrap-rails.git # or clone your own fork
