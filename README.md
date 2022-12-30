@@ -27,4 +27,4 @@ $ bin/rails server
 
 Your app should now be running on [localhost:3000](http://localhost:3000/).
 
-Your app should display a JSON representation of all flags in the project and environment associated with your SDK key and Client-side ID, with the values served for both the normal client and the bootstrapped client for the example user.
+Your app should display a JSON representation of all flags in the project and environment associated with your SDK key and Client-side ID, with the values served for both the normal client and the bootstrapped client for the example user context.

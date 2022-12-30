@@ -7,10 +7,10 @@
 <script src="https://app.launchdarkly.com/snippet/ldclient.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    var user = <%= raw @user %>;
+    var context = <%= raw @context %>;
     console.log(`Clients initialized`);
-    var client = LDClient.initialize('<%= @client_side_id %>', user);
-    var bootstrapClient = LDClient.initialize('<%= @client_side_id %>', user, {
+    var client = LDClient.initialize('<%= @client_side_id %>', context);
+    var bootstrapClient = LDClient.initialize('<%= @client_side_id %>', context, {
       bootstrap: <%= @all_flags_state %>
     });
 
@@ -29,7 +29,7 @@
     }
 
     function render(selector, targetClient) {
-      document.querySelector(selector).innerHTML = JSON.stringify(targetClient.allFlags(user), null, 2);
+      document.querySelector(selector).innerHTML = JSON.stringify(targetClient.allFlags(context), null, 2);
     }
   });
 </script>
