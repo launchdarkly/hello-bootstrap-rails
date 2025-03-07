@@ -4,14 +4,17 @@
 
 class HelloWorldController < ApplicationController
   def index
-    context = LaunchDarkly::LDContext.create({
-      key: "example-user-key",
-      kind: "user",
-      name: "Sandy",
-      groups: ["beta_testers"]
-    })
+    context = LaunchDarkly::LDContext.create(
+      {
+        key: 'example-user-key',
+        kind: 'user',
+        name: 'Sandy',
+        groups: ['beta_testers']
+      }
+    )
+
     @context = context.as_json.to_json.html_safe
     @client_side_id = Rails.configuration.client_side_id
-    @all_flags_state = (Rails.configuration.ld_client.all_flags_state(context, {client_side_only: true})).as_json.to_json.html_safe
+    @all_flags_state = (Rails.configuration.ld_client.all_flags_state(context, {client_side_only: true})).to_json.html_safe
   end
 end
