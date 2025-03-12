@@ -5,6 +5,7 @@ We've built a simple Rails app that demonstrates LaunchDarkly bootstrapping.
 We modified and/or added the following files to create this example:
 - app/views/hello_world/index.html.erb
 - app/controllers/hello_world_controller.rb
+- config/initializers/launchdarkly.rb
 - config/puma.rb
 
 Rails created the rest of the files and they are unmodified.
@@ -23,6 +24,8 @@ $ export LD_CLIENTSIDE_ID=YOUR-CLIENTSIDE-ID
 $ bundle install
 $ bin/rails db:migrate
 $ bin/rails server
+$ # Or if you prefer to have puma run in clustered mode
+$ WEB_CONCURRENCY=2 bin/rails server
 ```
 
 Your app should now be running on [localhost:3000](http://localhost:3000/).
