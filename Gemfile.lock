@@ -136,7 +136,7 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json (2.10.1)
+    json (2.10.2)
     launchdarkly-server-sdk (8.0.0)
       concurrent-ruby (~> 1.1)
       http (>= 4.4.0, < 6.0.0)
