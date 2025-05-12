@@ -66,4 +66,4 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'launchdarkly-server-sdk', '~> 8.0.0'
+gem 'launchdarkly-server-sdk', '~> 8.10.0'

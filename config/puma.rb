@@ -42,7 +42,6 @@ pidfile ENV["PIDFILE"] if ENV["PIDFILE"]
 
 if ENV.fetch("WEB_CONCURRENCY", "1").to_i > 1
   on_worker_boot do
-    Rails.configuration.client_side_id = ENV['LD_CLIENTSIDE_ID']
-    Rails.configuration.ld_client = LaunchDarkly::LDClient.new(ENV['LD_SDK_KEY'])
+    Rails.configuration.ld_client.postfork
   end
 end
