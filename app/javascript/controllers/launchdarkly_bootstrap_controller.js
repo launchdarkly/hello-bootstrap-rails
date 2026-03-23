@@ -29,12 +29,18 @@ export default class extends Controller {
       this.render(".bootstrap", bootstrapClient)
     })
 
-    client.start().then(() => {
+    client.start().then((result) => {
+      if (result?.error) {
+        console.error("Normal SDK failed to initialize:", result.error)
+      }
       console.log("Normal SDK ready")
       this.render(".normal", client)
     })
 
-    bootstrapClient.start({ bootstrap: bootstrapData }).then(() => {
+    bootstrapClient.start({ bootstrap: bootstrapData }).then((result) => {
+      if (result?.error) {
+        console.error("Bootstrapped SDK failed to initialize:", result.error)
+      }
       console.log("Bootstrapped SDK ready")
       this.render(".bootstrap", bootstrapClient)
     })
