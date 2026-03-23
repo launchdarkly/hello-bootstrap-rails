@@ -1,35 +1,10 @@
-<h1>LaunchDarkly server-side bootstrap example</h1>
-<ul>
-    <li><code>normal client</code>: <span class="normal">initializing…</span></li>
-    <li><code>bootstrapped client</code>: <span class="bootstrap">initializing…</span></li>
-</ul>
-
-<script src="https://app.launchdarkly.com/snippet/ldclient.min.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    var context = <%= raw @context %>;
-    console.log(`Clients initialized`);
-    var client = LDClient.initialize('<%= @client_side_id %>', context);
-    var bootstrapClient = LDClient.initialize('<%= @client_side_id %>', context, {
-      bootstrap: <%= @all_flags_state %>
-    });
-
-    client.on('ready', handleUpdateNormalClient);
-    client.on('change', handleUpdateNormalClient);
-    bootstrapClient.on('ready', handleUpdateBootstrapClient);
-    bootstrapClient.on('change', handleUpdateBootstrapClient);
-
-    function handleUpdateNormalClient() {
-      console.log(`Normal SDK updated`);
-      render('.normal', client);
-    }
-    function handleUpdateBootstrapClient() {
-      console.log(`Bootstrapped SDK updated`);
-      render('.bootstrap', bootstrapClient);
-    }
-
-    function render(selector, targetClient) {
-      document.querySelector(selector).innerHTML = JSON.stringify(targetClient.allFlags(context), null, 2);
-    }
-  });
-</script>
+<div data-controller="launchdarkly-bootstrap"
+     data-launchdarkly-bootstrap-client-side-id-value="<%= @client_side_id %>"
+     data-launchdarkly-bootstrap-context-value="<%= @context %>"
+     data-launchdarkly-bootstrap-bootstrap-value="<%= @all_flags_state %>">
+  <h1>LaunchDarkly server-side bootstrap example</h1>
+  <ul>
+      <li><code>normal client</code>: <span class="normal">initializing…</span></li>
+      <li><code>bootstrapped client</code>: <span class="bootstrap">initializing…</span></li>
+  </ul>
+</div>
