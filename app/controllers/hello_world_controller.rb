@@ -13,8 +13,8 @@ class HelloWorldController < ApplicationController
       }
     )
 
-    @context = context.as_json.to_json.html_safe
+    @context = context.as_json.to_json
     @client_side_id = Rails.configuration.client_side_id
-    @all_flags_state = (Rails.configuration.ld_client.all_flags_state(context, {client_side_only: true})).to_json.html_safe
+    @all_flags_state = Rails.configuration.ld_client.all_flags_state(context, {client_side_only: true}).to_json
   end
 end
