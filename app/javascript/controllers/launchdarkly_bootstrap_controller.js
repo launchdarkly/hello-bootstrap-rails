@@ -12,12 +12,12 @@ export default class extends Controller {
     const context = this.contextValue
     const clientSideId = this.clientSideIdValue
 
-    console.log("Clients initialized")
-
     const bootstrapData = this.bootstrapValue
 
     const client = createClient(clientSideId, context)
     const bootstrapClient = createClient(clientSideId, context)
+
+    console.log("Clients created")
 
     client.on("change", () => {
       console.log("Normal SDK updated")
