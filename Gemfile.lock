@@ -102,10 +102,10 @@ GEM
     erubi (1.13.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    http (6.0.2)
+    http (6.0.3)
       http-cookie (~> 1.0)
       llhttp (~> 0.6.1)
-    http-cookie (1.1.0)
+    http-cookie (1.1.6)
       domain_name (~> 0.5)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
@@ -121,8 +121,8 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json (2.19.3)
-    launchdarkly-server-sdk (8.13.0)
+    json (2.19.8)
+    launchdarkly-server-sdk (8.14.0)
       benchmark (~> 0.1, >= 0.1.1)
       concurrent-ruby (~> 1.1)
       http (>= 4.4.0, < 7.0.0)
@@ -177,7 +177,7 @@ GEM
     nokogiri (1.19.3-x86_64-linux-musl)
       racc (~> 1.4)
     observer (0.1.2)
-    openssl (4.0.1)
+    openssl (4.0.2)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -317,4 +317,4 @@ RUBY VERSION
    ruby 3.3.1p55
 
 BUNDLED WITH
-   2.5.22
+   2.5.9
