@@ -69,4 +69,4 @@ end
 gem 'launchdarkly-server-sdk', '~> 8.10'
 
 # Rails 8.1 calls JSON.parse with a positional options hash, which json 3.x rejects
-gem 'json', '~> 2.21'
+gem 'json', '~> 3.0'
