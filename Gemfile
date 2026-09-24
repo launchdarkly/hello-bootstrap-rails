@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '3.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 8.1.3'
+gem 'rails', '~> 8.1.4'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -68,5 +68,5 @@ end
 
 gem 'launchdarkly-server-sdk', '~> 8.10'
 
-# Rails 8.1 calls JSON.parse with a positional options hash, which json 3.x rejects
-gem 'json', '~> 2.21'
+# json 3.x requires Rails >= 8.1.4 (earlier ActiveSupport passes JSON.parse a positional options hash)
+gem 'json', '~> 3.0'
