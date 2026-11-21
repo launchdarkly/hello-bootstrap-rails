@@ -100,7 +100,7 @@ GEM
     debug (1.11.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
-    domain_name (0.7.20261007)
+    domain_name (0.7.20261117)
     drb (2.2.3)
     erb (6.0.7)
     erubi (1.13.1)
@@ -127,7 +127,7 @@ GEM
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
     json (3.1.0)
-    launchdarkly-server-sdk (8.20.0)
+    launchdarkly-server-sdk (8.20.1)
       benchmark (~> 0.1, >= 0.1.1)
       concurrent-ruby (~> 1.1)
       http (>= 4.4.0, < 7.0.0)
@@ -321,7 +321,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   json (~> 3.1)
-  launchdarkly-server-sdk (~> 8.19)
+  launchdarkly-server-sdk (~> 8.20)
   puma (>= 5.0)
   rails (~> 8.1.4)
   selenium-webdriver
